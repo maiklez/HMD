@@ -1,0 +1,49 @@
+1 - You must create a class extending FeedParserBase following Object Oriented Programming Best Practices
+2 - This class must load the feed products.xml throught method 'parse'. Feed location must be set in var $_strFeedUrl.
+3 - Your class must log start and end of parsing process and also every item parsed with method notify in class 'InfoLogger'.
+4 - Your class must log any error that might happen trough notify method in class 'ErrorLogger'
+5 - Class must log these errors: feed not found, empty feed, or incorrect item (empty title or link)
+6 - Class must have proper exception handling
+7 - Your code should be able to be executed via CLI (php ProductsParsing.php)
+8 - Your class should return an array of Product objects (Product class and a proper namespace must be created) with name, url, ID, and date (in Y-m-d H:i:s)
+9 - In all the exercise, you should try to follow PSR-0, PSR-1 and PSR-2
+10 - Generally speaking, the more decoupled your code, the better, so do not hesitate to create as many classes and namespaces as you wish
+
+<item>
+<title>Marqués de Riscal Vino Tinto Reserva D.O. Rioja</title>
+<link>https://www.ulabox.com/producto/marques-de-riscal-vino-tinto-reserva-d-o-rioja/7408</link>
+<pubDate>Mon, 10 Sep 2011 17:20:00 +0100</pubDate>
+</item>
+
+And Product object should look like
+
+name: Marqués de Riscal Vino Tinto Reserva D.O. Rioja
+id: 7408
+date: 2011-09-10 17:20:00
+url: https://www.ulabox.com/producto/marques-de-riscal-vino-tinto-reserva-d-o-rioja/7408
+
+====================================================================================================================================================================================================================================================================================
+
+
+Algorithm 
+
+Problem Statement
+=================
+
+SpecialSum is a function defined as:
+• SpecialSum(0 , n) = n, for all positive n.
+• SpecialSum(k , n) = SpecialSum(k-1 , 1) + SpecialSum(k-1 , 2) + ... + SpecialSum(k-1 , n), for all positive k, n.
+
+Given k and n, return the value for SpecialSum(k , n).
+
+Expected values are:
+
+k = 1, n = 3 -> 6
+k = 2, n = 3 -> 10
+k = 4, n = 10 -> 2002
+k = 10, n = 10 -> 167960
+k = 20, n = 20 -> 131282408400
+k = 30, n = 30 -> 114449595062769120
+k = 100, n = 100 -> You tell us this one please ;)
+89651994709013149668717007007410063242083752153874590932000
+
